@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #fff;
+}
+
+
+.modal-header{border-bottom: 0;}
+.modal-footer{border-top: 0;}
+.modal-body{padding: 0 1rem; font-size: 15px;}

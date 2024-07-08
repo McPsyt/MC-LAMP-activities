@@ -1,0 +1,17 @@
+{
+	"New journal entry": "Nuova voce da inserire nel diario",
+	"How do you feel today?": "Come ti senti oggi?",
+	"Good": "Bene",
+	"Bad": "Male",
+	"Submit": "Invia",
+	"Leaving so soon?": "Gi\u00e0 finito?",
+	"If you leave without submitting, your entry will be lost.": "Se si esce senza premere invio, i dati inseriti andranno persi.",
+	"No, don’t leave yet": "No, aspetta ad uscire",
+	"Yes, leave": "Sì, esci dall’attività",
+	"max": "Massimo",
+	"characters": "caratteri",
+	"Sunday":"Domenica", "Monday":
+	"Lunedi", "Tuesday":"Martedì", "Wednesday":"Mercoledì", "Thursday":"Giovedì", "Friday":"Venerdì", "Saturday":"Sabato",
+	"Jan":"Gen", "Feb":"Feb", "Mar":"Mar", "Apr":"Apr", "May":"Mag", "Jun":"Giu", "Jul":"Lug", "Aug":"Ago",
+	 "Sep":"Sett", "Oct":"Ott", "Nov":"Nov", "Dec":"Dic"
+}
