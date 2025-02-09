@@ -1,8 +1,0 @@
-declare module '*.svg'
-declare module '*.png'
-declare module '*.jpg'
-declare module 'react-router-dom'
-declare module 'react-dom'
-declare module 'react-hot-loader'
-declare module 'react-animated-css'
-declare module 'styled-components'

@@ -16,8 +16,9 @@ import "./i18n"
 const eventMethod = window.addEventListener ? "addEventListener" : "attachEvent"
 const eventer = window[eventMethod]
 const messageEvent = eventMethod === "attachEvent" ? "onmessage" : "message"
-eventer(
-  messageEvent, (e) => {    
+
+ eventer(
+   messageEvent, (e) => {    
 		ReactDOM.render(
       <SnackbarProvider>
         <AppContainer>
@@ -27,6 +28,6 @@ eventer(
           , 		  
 		  document.getElementById("root")
 		);
-  },
-  false
- )
+   },
+   false
+  )
