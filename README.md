@@ -11,8 +11,9 @@ git branch -r
 git checkout -b bidmc bidmc/master
 
 
-# Using the following commit (Feb 12, 2025):
-# b12a660200ace192b46624231ce3bf05519b6082
+# Using the following commit (Apr 30, 2026):
+# 4f1b5abb80b363ff8a8cbed120fb4d70496bbb9a
 
+git checkout 4f1b5abb80b363ff8a8cbed120fb4d70496bbb9a -- Tips
 
 ```
