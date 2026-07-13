@@ -16,4 +16,4 @@ git checkout -b bidmc bidmc/master
 
 git checkout 4f1b5abb80b363ff8a8cbed120fb4d70496bbb9a -- Tips
 
-```
+```Fork of https://github.com/BIDMCDigitalPsychiatry/LAMP-activities
