@@ -1,0 +1,9 @@
+node_modules
+build
+build-builder
+dist.html
+dist.html.b64
+test-results
+playwright-report
+dev/activity.b64
+*.tsbuildinfo

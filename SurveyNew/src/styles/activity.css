@@ -1,0 +1,6 @@
+/* Activity bundle: only scan what the participant UI uses, to keep the file small. */
+@import "tailwindcss" source(none);
+@source "../activity";
+@source "../renderer";
+@source "../components";
+@import "./shared.css";

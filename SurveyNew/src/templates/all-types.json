@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 1,
+  "id": "all_types",
+  "version": "1",
+  "title": "All question types",
+  "defaultLanguage": "en",
+  "languages": [
+    "en"
+  ],
+  "intro": {
+    "title": "Question type tour",
+    "body": "This demo shows **every question type** SurveyNew supports. Nothing you enter here is used."
+  },
+  "options": {
+    "layout": "section",
+    "showProgress": true,
+    "showQuestionNumbers": true,
+    "allowBackNavigation": true,
+    "autoAdvance": false,
+    "confirmExit": true,
+    "resume": {
+      "enabled": false,
+      "expiresAfterHours": 12
+    }
+  },
+  "appearance": {
+    "theme": "zinc",
+    "mode": "light",
+    "radius": "md"
+  },
+  "questions": [
+    {
+      "id": "s_choice",
+      "type": "section",
+      "text": "Choices",
+      "description": "Single, multiple, dropdown, yes/no and ranking."
+    },
+    {
+      "id": "single",
+      "type": "single",
+      "text": "Single choice",
+      "options": [
+        {
+          "value": "a",
+          "label": "Option A",
+          "description": "With a description"
+        },
+        {
+          "value": "b",
+          "label": "Option B"
+        },
+        {
+          "value": "c",
+          "label": "Option C"
+        }
+      ],
+      "allowOther": true
+    },
+    {
+      "id": "multiple",
+      "type": "multiple",
+      "text": "Multiple choice (up to 2)",
+      "maxSelected": 2,
+      "options": [
+        {
+          "value": "x",
+          "label": "X"
+        },
+        {
+          "value": "y",
+          "label": "Y"
+        },
+        {
+          "value": "z",
+          "label": "Z"
+        },
+        {
+          "value": "none",
+          "label": "None",
+          "exclusive": true
+        }
+      ]
+    },
+    {
+      "id": "dropdown",
+      "type": "dropdown",
+      "text": "Dropdown with search",
+      "options": [
+        {
+          "value": "Alberta",
+          "label": "Alberta"
+        },
+        {
+          "value": "British Columbia",
+          "label": "British Columbia"
+        },
+        {
+          "value": "Manitoba",
+          "label": "Manitoba"
+        },
+        {
+          "value": "New Brunswick",
+          "label": "New Brunswick"
+        },
+        {
+          "value": "Newfoundland and Labrador",
+          "label": "Newfoundland and Labrador"
+        },
+        {
+          "value": "Nova Scotia",
+          "label": "Nova Scotia"
+        },
+        {
+          "value": "Ontario",
+          "label": "Ontario"
+        },
+        {
+          "value": "Prince Edward Island",
+          "label": "Prince Edward Island"
+        },
+        {
+          "value": "Quebec",
+          "label": "Quebec"
+        },
+        {
+          "value": "Saskatchewan",
+          "label": "Saskatchewan"
+        },
+        {
+          "value": "Northwest Territories",
+          "label": "Northwest Territories"
+        },
+        {
+          "value": "Nunavut",
+          "label": "Nunavut"
+        },
+        {
+          "value": "Yukon",
+          "label": "Yukon"
+        }
+      ]
+    },
+    {
+      "id": "yesno",
+      "type": "boolean",
+      "text": "Yes / No"
+    },
+    {
+      "id": "ranking",
+      "type": "ranking",
+      "text": "Rank these from most to least important",
+      "options": [
+        {
+          "value": "sleep",
+          "label": "Sleep"
+        },
+        {
+          "value": "exercise",
+          "label": "Exercise"
+        },
+        {
+          "value": "diet",
+          "label": "Diet"
+        },
+        {
+          "value": "social",
+          "label": "Social life"
+        }
+      ]
+    },
+    {
+      "id": "s_scales",
+      "type": "section",
+      "text": "Scales"
+    },
+    {
+      "id": "likert",
+      "type": "likert",
+      "preset": "agree5",
+      "text": "I feel in control of my day (Likert)"
+    },
+    {
+      "id": "matrix",
+      "type": "matrix",
+      "preset": "frequency5",
+      "text": "In the past week, how often did you... (matrix)",
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Feel rested"
+        },
+        {
+          "id": "r2",
+          "text": "Feel worried"
+        },
+        {
+          "id": "r3",
+          "text": "Laugh"
+        }
+      ]
+    },
+    {
+      "id": "slider",
+      "type": "slider",
+      "text": "Slider",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "minLabel": "Low",
+      "maxLabel": "High",
+      "showTicks": true
+    },
+    {
+      "id": "vas",
+      "type": "vas",
+      "text": "Visual analogue scale",
+      "minLabel": "No pain",
+      "maxLabel": "Worst pain imaginable"
+    },
+    {
+      "id": "rating",
+      "type": "rating",
+      "text": "Numeric rating (0-10)",
+      "min": 0,
+      "max": 10,
+      "minLabel": "Not at all",
+      "maxLabel": "Extremely"
+    },
+    {
+      "id": "faces",
+      "type": "faces",
+      "text": "Faces scale",
+      "count": 5
+    },
+    {
+      "id": "s_entry",
+      "type": "section",
+      "text": "Text, numbers, dates and times"
+    },
+    {
+      "id": "number",
+      "type": "number",
+      "text": "How many cups of coffee today?",
+      "min": 0,
+      "max": 20,
+      "unit": "cups"
+    },
+    {
+      "id": "short",
+      "type": "short",
+      "text": "Short text (email)",
+      "inputMode": "email",
+      "placeholder": "name@example.com",
+      "required": false
+    },
+    {
+      "id": "long",
+      "type": "text",
+      "text": "Long text",
+      "maxLength": 500,
+      "required": false
+    },
+    {
+      "id": "date",
+      "type": "date",
+      "text": "Date (not in the future)",
+      "maxDate": "today"
+    },
+    {
+      "id": "time",
+      "type": "time",
+      "text": "Time (24-hour)",
+      "format": "24h",
+      "minuteStep": 5
+    },
+    {
+      "id": "datetime",
+      "type": "datetime",
+      "text": "Date and time"
+    },
+    {
+      "id": "duration",
+      "type": "duration",
+      "text": "Duration",
+      "maxHours": 12
+    },
+    {
+      "id": "info",
+      "type": "info",
+      "text": "An **information** block. Use it for instructions, links like [MindCheck](https://example.org), or lists:\n- one\n- two"
+    }
+  ],
+  "completion": {
+    "title": "All done",
+    "body": "Thanks for trying every question type."
+  }
+}

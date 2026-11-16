@@ -1,0 +1,265 @@
+[
+ {
+  "name": "Mood",
+  "spec": "lamp.survey",
+  "settings": [
+   {
+    "text": "Today I feel little interest or pleasure",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I feel depressed",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I had trouble sleeping",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I feel tired or have little energy",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I have a poor appetite or am overeating",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I feel bad about myself or that I have let others down",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I have trouble focusing or concentrating",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I feel too slow or too restless",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I have thoughts of self-harm",
+    "type": "likert",
+    "options": null
+   }
+  ]
+ },
+ {
+  "name": "Sleep and Social",
+  "spec": "lamp.survey",
+  "settings": [
+   {
+    "text": "Last night I had trouble falling asleep",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Last night I had trouble staying asleep",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "This morning I was up earlier than I wanted",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "In the last THREE DAYS, I have taken my medications as scheduled",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "In the last THREE DAYS, during the daytime I have gone outside my home",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "In the last THREE DAYS, I have preferred to spend time alone",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "In the last THREE DAYS, I have had arguments with other people",
+    "type": "likert",
+    "options": null
+   }
+  ]
+ },
+ {
+  "name": "Anxiety",
+  "spec": "lamp.survey",
+  "settings": [
+   {
+    "text": "Today I feel anxious",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I cannot stop worrying",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I am worrying too much about different things",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I have trouble relaxing",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I feel so restless it's hard to sit still",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I am easily annoyed or irritable",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I feel afraid something awful might happen",
+    "type": "likert",
+    "options": null
+   }
+  ]
+ },
+ {
+  "name": "Psychosis and Social",
+  "spec": "lamp.survey",
+  "settings": [
+   {
+    "text": "Today I have heard voices or saw things others cannot",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I have had thoughts racing through my head",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I feel I have special powers",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I feel people are watching me",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I feel people are against me",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I feel confused or puzzled",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "Today I feel unable to cope and have difficulty with everyday tasks",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "In the last THREE DAYS, I have had someone to talk to",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "In the last THREE DAYS, I have felt uneasy with groups of people",
+    "type": "likert",
+    "options": null
+   }
+  ]
+ },
+ {
+  "name": "App Usability",
+  "spec": "lamp.survey",
+  "settings": [
+   {
+    "text": "I trust this app to guide me towards my personal goals",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "I believe this app's tasks will help me to address my problem",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "This app encourages me to accomplish tasks and make progress",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "I agree that the tasks within this app are important for my goals",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "This app is easy to use and operate",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "This app supports me to overcome challenges",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "When I see others who are doing better than I am, I realize that it is possible to improve",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "When I see others who are doing better than I am, I feel frustrated about my own situation",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "When I see others who are doing worse than I am, I feel fear that my future will be similar to them",
+    "type": "likert",
+    "options": null
+   },
+   {
+    "text": "When I see others who are doing worse than I am, I feel relieved about my own situation",
+    "type": "likert",
+    "options": null
+   }
+  ]
+ },
+ {
+  "name": "Water and Nutrition",
+  "spec": "lamp.survey",
+  "settings": [
+   {
+    "text": "Do you feel like you've had nutritious meals today?",
+    "type": "boolean",
+    "options": null
+   },
+   {
+    "text": "How much water have you drank today?",
+    "type": "list",
+    "options": [
+     "16 oz",
+     "32 oz",
+     "48 oz",
+     "64 oz",
+     "80 oz",
+     "96 oz"
+    ]
+   }
+  ]
+ }
+]

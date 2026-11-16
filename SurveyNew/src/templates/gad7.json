@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "id": "gad7",
+  "version": "1",
+  "title": "GAD-7",
+  "defaultLanguage": "en",
+  "languages": [
+    "en"
+  ],
+  "options": {
+    "layout": "single",
+    "showProgress": true,
+    "allowBackNavigation": true,
+    "autoAdvance": false,
+    "confirmExit": true,
+    "resume": {
+      "enabled": true,
+      "expiresAfterHours": 12
+    }
+  },
+  "appearance": {
+    "theme": "zinc",
+    "mode": "light",
+    "radius": "md"
+  },
+  "questions": [
+    {
+      "id": "gad",
+      "type": "matrix",
+      "preset": "frequency4",
+      "text": "Over the **last 2 weeks**, how often have you been bothered by the following problems?",
+      "rows": [
+        {
+          "id": "g1",
+          "text": "Feeling nervous, anxious, or on edge"
+        },
+        {
+          "id": "g2",
+          "text": "Not being able to stop or control worrying"
+        },
+        {
+          "id": "g3",
+          "text": "Worrying too much about different things"
+        },
+        {
+          "id": "g4",
+          "text": "Trouble relaxing"
+        },
+        {
+          "id": "g5",
+          "text": "Being so restless that it is hard to sit still"
+        },
+        {
+          "id": "g6",
+          "text": "Becoming easily annoyed or irritable"
+        },
+        {
+          "id": "g7",
+          "text": "Feeling afraid, as if something awful might happen"
+        }
+      ]
+    }
+  ],
+  "scores": [
+    {
+      "id": "gad7_total",
+      "label": "GAD-7 total (0-21)",
+      "method": "sum",
+      "questions": [
+        "gad"
+      ]
+    }
+  ],
+  "alerts": [
+    {
+      "id": "gad7_severe",
+      "severity": "warning",
+      "timing": "submit",
+      "when": {
+        "score": "gad7_total",
+        "op": "gte",
+        "value": 15
+      },
+      "title": "Thank you for sharing",
+      "message": "Your answers suggest you may be feeling very anxious. Please consider talking with your care team."
+    }
+  ]
+}

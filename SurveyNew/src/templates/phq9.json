@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "id": "phq9",
+  "version": "1",
+  "title": "PHQ-9",
+  "defaultLanguage": "en",
+  "languages": [
+    "en"
+  ],
+  "options": {
+    "layout": "question",
+    "showProgress": true,
+    "allowBackNavigation": true,
+    "autoAdvance": true,
+    "confirmExit": true,
+    "resume": {
+      "enabled": true,
+      "expiresAfterHours": 12
+    }
+  },
+  "appearance": {
+    "theme": "zinc",
+    "mode": "light",
+    "radius": "md"
+  },
+  "questions": [
+    {
+      "id": "intro",
+      "type": "info",
+      "text": "The next questions ask how often you have been bothered by some common problems over the **last 2 weeks**. There are no right or wrong answers."
+    },
+    {
+      "id": "phq1",
+      "type": "likert",
+      "preset": "frequency4",
+      "text": "Little interest or pleasure in doing things",
+      "description": "Over the **last 2 weeks**, how often have you been bothered by this problem?"
+    },
+    {
+      "id": "phq2",
+      "type": "likert",
+      "preset": "frequency4",
+      "text": "Feeling down, depressed, or hopeless",
+      "description": "Over the **last 2 weeks**, how often have you been bothered by this problem?"
+    },
+    {
+      "id": "phq3",
+      "type": "likert",
+      "preset": "frequency4",
+      "text": "Trouble falling or staying asleep, or sleeping too much",
+      "description": "Over the **last 2 weeks**, how often have you been bothered by this problem?"
+    },
+    {
+      "id": "phq4",
+      "type": "likert",
+      "preset": "frequency4",
+      "text": "Feeling tired or having little energy",
+      "description": "Over the **last 2 weeks**, how often have you been bothered by this problem?"
+    },
+    {
+      "id": "phq5",
+      "type": "likert",
+      "preset": "frequency4",
+      "text": "Poor appetite or overeating",
+      "description": "Over the **last 2 weeks**, how often have you been bothered by this problem?"
+    },
+    {
+      "id": "phq6",
+      "type": "likert",
+      "preset": "frequency4",
+      "text": "Feeling bad about yourself, or that you are a failure or have let yourself or your family down",
+      "description": "Over the **last 2 weeks**, how often have you been bothered by this problem?"
+    },
+    {
+      "id": "phq7",
+      "type": "likert",
+      "preset": "frequency4",
+      "text": "Trouble concentrating on things, such as reading the newspaper or watching television",
+      "description": "Over the **last 2 weeks**, how often have you been bothered by this problem?"
+    },
+    {
+      "id": "phq8",
+      "type": "likert",
+      "preset": "frequency4",
+      "text": "Moving or speaking so slowly that other people could have noticed. Or the opposite: being so fidgety or restless that you have been moving around a lot more than usual",
+      "description": "Over the **last 2 weeks**, how often have you been bothered by this problem?"
+    },
+    {
+      "id": "phq9",
+      "type": "likert",
+      "preset": "frequency4",
+      "text": "Thoughts that you would be better off dead, or of hurting yourself in some way",
+      "description": "Over the **last 2 weeks**, how often have you been bothered by this problem?"
+    },
+    {
+      "id": "phq10",
+      "type": "likert",
+      "text": "How difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?",
+      "options": [
+        {
+          "value": 0,
+          "label": "Not difficult at all"
+        },
+        {
+          "value": 1,
+          "label": "Somewhat difficult"
+        },
+        {
+          "value": 2,
+          "label": "Very difficult"
+        },
+        {
+          "value": 3,
+          "label": "Extremely difficult"
+        }
+      ],
+      "required": false,
+      "showIf": {
+        "score": "phq9_total",
+        "op": "gt",
+        "value": 0
+      }
+    }
+  ],
+  "scores": [
+    {
+      "id": "phq9_total",
+      "label": "PHQ-9 total (0-27)",
+      "method": "sum",
+      "questions": [
+        "phq1",
+        "phq2",
+        "phq3",
+        "phq4",
+        "phq5",
+        "phq6",
+        "phq7",
+        "phq8",
+        "phq9"
+      ]
+    }
+  ],
+  "alerts": [
+    {
+      "id": "phq9_item9",
+      "severity": "critical",
+      "timing": "submit",
+      "when": {
+        "question": "phq9",
+        "op": "gt",
+        "value": 0
+      },
+      "title": "You're not alone",
+      "message": "You said you have had thoughts of being better off dead or of hurting yourself. If you are in danger right now, call **911** or go to your nearest emergency department. You can call or text **988** (Suicide Crisis Helpline, Canada & US) at any time.\n\n_Example message: adapt it to your study's safety protocol._"
+    },
+    {
+      "id": "phq9_severe",
+      "severity": "warning",
+      "timing": "submit",
+      "when": {
+        "score": "phq9_total",
+        "op": "gte",
+        "value": 20
+      },
+      "title": "Thank you for sharing",
+      "message": "Your answers suggest you may be having a hard time. Please consider talking with your care team about how you have been feeling."
+    }
+  ],
+  "completion": {
+    "title": "Thank you",
+    "body": "Your answers have been recorded."
+  }
+}

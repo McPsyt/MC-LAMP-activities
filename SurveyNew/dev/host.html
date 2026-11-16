@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SurveyNew host simulator</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; font: 14px/1.4 system-ui, sans-serif; background: #f4f4f5; color: #18181b; }
+      .wrap { display: flex; gap: 16px; padding: 16px; flex-wrap: wrap; }
+      .panel { background: #fff; border: 1px solid #e4e4e7; border-radius: 10px; padding: 12px; }
+      .controls { width: 340px; display: grid; gap: 8px; align-content: start; }
+      .phone { width: 390px; height: 780px; padding: 0; overflow: hidden; }
+      iframe { width: 100%; height: 100%; border: 0; display: block; }
+      textarea { width: 100%; height: 160px; font: 12px ui-monospace, monospace; }
+      pre { white-space: pre-wrap; word-break: break-word; font: 11px ui-monospace, monospace; max-height: 560px; overflow: auto; margin: 0; }
+      label { display: grid; gap: 2px; }
+      button { padding: 8px 12px; border-radius: 8px; border: 1px solid #d4d4d8; background: #18181b; color: #fff; cursor: pointer; }
+      .result { width: 420px; }
+      body.embedded .controls, body.embedded .result { display: none; }
+      body.embedded .wrap { padding: 0; }
+      body.embedded .phone { width: 100vw; height: 100vh; border: 0; border-radius: 0; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="panel controls">
+        <strong>Parent-app simulator</strong>
+        <small>Mirrors MC-LAMP-dashboard EmbeddedActivity: srcdoc iframe, settings posted on load, result parsed with JSON.parse.</small>
+        <label>Survey <select id="template"></select></label>
+        <label>Language <select id="language">
+          <option>en-US</option><option>fr-FR</option><option>es-ES</option><option>de-DE</option><option>da-DK</option>
+          <option>it-IT</option><option>hi-IN</option><option>ko-KR</option><option>zh-CN</option><option>zh-HK</option>
+        </select></label>
+        <label><span><input type="checkbox" id="noBack" /> noBack</span></label>
+        <label>Activity source <select id="source">
+          <option value="built">Built file (dev/activity.b64, decoded with atob like the dashboard)</option>
+          <option value="dev">Dev server (/index.html, live reload)</option>
+        </select></label>
+        <label>Settings JSON (editable) <textarea id="settings" spellcheck="false"></textarea></label>
+        <button id="launch">Launch</button>
+      </div>
+      <div class="panel phone"><div id="frame" style="height:100%"></div></div>
+      <div class="panel result"><strong>Messages from activity</strong><pre id="log">(none yet)</pre></div>
+    </div>
+    <script type="module" src="./host.ts"></script>
+  </body>
+</html>

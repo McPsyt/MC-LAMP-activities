@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "id": "daily_checkin",
+  "version": "1",
+  "title": "Daily check-in",
+  "defaultLanguage": "en",
+  "languages": [
+    "en"
+  ],
+  "options": {
+    "layout": "question",
+    "showProgress": true,
+    "allowBackNavigation": true,
+    "autoAdvance": true,
+    "confirmExit": true,
+    "resume": {
+      "enabled": true,
+      "expiresAfterHours": 6
+    }
+  },
+  "appearance": {
+    "theme": "blue",
+    "mode": "system",
+    "radius": "lg"
+  },
+  "questions": [
+    {
+      "id": "mood",
+      "type": "faces",
+      "text": "How is your mood right now?",
+      "count": 5
+    },
+    {
+      "id": "stress",
+      "type": "vas",
+      "text": "How stressed do you feel right now?",
+      "minLabel": "Not at all stressed",
+      "maxLabel": "Extremely stressed"
+    },
+    {
+      "id": "bedtime",
+      "type": "time",
+      "text": "What time did you go to bed last night?",
+      "format": "12h",
+      "minuteStep": 15
+    },
+    {
+      "id": "sleep_hours",
+      "type": "duration",
+      "text": "About how long did you sleep?",
+      "maxHours": 16,
+      "minuteStep": 15
+    },
+    {
+      "id": "sleep_quality",
+      "type": "rating",
+      "text": "How would you rate your sleep quality?",
+      "min": 0,
+      "max": 10,
+      "minLabel": "Very poor",
+      "maxLabel": "Excellent"
+    },
+    {
+      "id": "activity",
+      "type": "multiple",
+      "text": "What have you done today so far?",
+      "options": [
+        {
+          "value": "exercise",
+          "label": "Exercise"
+        },
+        {
+          "value": "socialize",
+          "label": "Spent time with others"
+        },
+        {
+          "value": "outside",
+          "label": "Went outside"
+        },
+        {
+          "value": "work",
+          "label": "Work or study"
+        },
+        {
+          "value": "none",
+          "label": "None of these",
+          "exclusive": true
+        }
+      ],
+      "randomizeOptions": true
+    },
+    {
+      "id": "notes",
+      "type": "text",
+      "text": "Anything else you'd like to share?",
+      "required": false,
+      "placeholder": "Optional"
+    }
+  ],
+  "scores": [
+    {
+      "id": "sleep_minutes",
+      "label": "Sleep (minutes)",
+      "method": "sum",
+      "questions": [
+        "sleep_hours"
+      ]
+    }
+  ]
+}

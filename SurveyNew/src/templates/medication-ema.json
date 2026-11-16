@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "medication_ema",
+  "version": "1",
+  "title": { "en": "Medication check-in", "fr": "Suivi des médicaments" },
+  "defaultLanguage": "en",
+  "languages": ["en", "fr"],
+  "options": { "layout": "question", "showProgress": true, "allowBackNavigation": true, "autoAdvance": false, "confirmExit": true, "resume": { "enabled": true, "expiresAfterHours": 4 } },
+  "appearance": { "theme": "zinc", "mode": "light", "radius": "md" },
+  "questions": [
+    {
+      "id": "dose_taken",
+      "type": "boolean",
+      "text": { "en": "Did you already take your first dose of medication?", "fr": "Avez-vous déjà pris votre première dose de médicament ?" }
+    },
+    {
+      "id": "dose_time",
+      "type": "time",
+      "text": { "en": "At what time?", "fr": "À quelle heure ?" },
+      "format": "12h",
+      "minuteStep": 5,
+      "showIf": { "question": "dose_taken", "op": "eq", "value": "Yes" }
+    },
+    {
+      "id": "missed_reason",
+      "type": "single",
+      "text": { "en": "What's the main reason you haven't taken it yet?", "fr": "Quelle est la principale raison pour laquelle vous ne l'avez pas encore pris ?" },
+      "showIf": { "question": "dose_taken", "op": "eq", "value": "No" },
+      "options": [
+        { "value": "later", "label": { "en": "I plan to take it later today", "fr": "Je compte le prendre plus tard aujourd'hui" } },
+        { "value": "forgot", "label": { "en": "I forgot", "fr": "J'ai oublié" } },
+        { "value": "side_effects", "label": { "en": "Worried about side effects", "fr": "Inquiet des effets secondaires" } },
+        { "value": "ran_out", "label": { "en": "I ran out", "fr": "Je n'en ai plus" } }
+      ],
+      "allowOther": true
+    },
+    {
+      "id": "side_effects",
+      "type": "multiple",
+      "text": { "en": "Since your dose at {{dose_time}}, have you noticed any of these?", "fr": "Depuis votre dose de {{dose_time}}, avez-vous remarqué l'un de ces effets ?" },
+      "showIf": { "question": "dose_taken", "op": "eq", "value": "Yes" },
+      "options": [
+        { "value": "nausea", "label": { "en": "Nausea", "fr": "Nausées" } },
+        { "value": "headache", "label": { "en": "Headache", "fr": "Maux de tête" } },
+        { "value": "dizziness", "label": { "en": "Dizziness", "fr": "Étourdissements" } },
+        { "value": "sleepiness", "label": { "en": "Sleepiness", "fr": "Somnolence" } },
+        { "value": "none", "label": { "en": "None of these", "fr": "Aucun de ces effets" }, "exclusive": true }
+      ]
+    },
+    {
+      "id": "wellbeing",
+      "type": "faces",
+      "text": { "en": "How are you feeling right now?", "fr": "Comment vous sentez-vous en ce moment ?" },
+      "count": 5
+    }
+  ]
+}
